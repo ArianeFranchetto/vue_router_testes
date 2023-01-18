@@ -1,30 +1,24 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div>
+    <ul>
+      <li class="lista">
+<RouterLink to="/">Home</RouterLink> - 
+<RouterLink :to="{name: 'sobre'}">Sobre</RouterLink>
+      </li>
+    </ul>
+    <h1>Testando vue router</h1>
+    <RouterView></RouterView>
+  </div>
 </template>
 
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  background-color: #DEB887;
   text-align: center;
-  color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+.lista {
+ list-style: none; 
 }
 </style>
